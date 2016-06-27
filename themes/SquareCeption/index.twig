@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<!--
+	© 2016 Nicolas Bechelot
+	contact: contact@nicolas-bech.net
+	website: //nicolas-bech.net
+	version: {{ config.site_version }}
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+		{% if meta.description %}
+        <meta name="description" content="{{ meta.description|striptags }}">
+		{% endif %}{% if meta.robots %}
+			<meta name="robots" content="{{ meta.robots }}">
+		{% endif %}
+		<link rel="stylesheet" href="{{ theme_url }}/assets/css/main.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	</head>
+	<body class="index">
+		<div id="page-wrapper">
+			<!-- Header -->
+			<header id="header" class="alt">
+				<h1><a href="{{ "index"|link }}" id="logo">{{ site_title }} <span>{{ config.site_version }}</span></a></h1>
+				<nav id="nav">
+					<ul>
+						{% for page in pages if page.title %}
+							<li{% if page.id == current_page.id %} class="current"{% endif %}>
+								<a href="{{ page.url }}">{{ page.title }}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</nav>
+			</header>
+			<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<header>
+						<h2>{{ site_title }}</h2>
+					</header>
+					<p>{{ meta.description }}</p>
+					<footer>
+						<ul class="buttons vertical">
+							<li><a href="#main" class="button fit scrolly"><i class="fa fa-chevron-down"></i></a></li>
+						</ul>
+					</footer>
+				</div>
+			</section>
+			<!-- Main -->
+			<article id="main">
+
+				<header class="special container">
+					<span class="icon {{ meta.icon }}"></span>
+					{{ content }}
+				</header>
+			</article>
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://twitter.com/{{ config.twitter_name }}" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://github.com/{{ config.github_name }}" class="icon circle fa-github"><span class="label">Github</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; 2016 <strong>{{ config.title_author }}</strong> - <a href="http://nicolas-bech.net/?admin">Admin</a></li>
+				</ul>
+				 <ul>
+				{% for page in page_languages %}
+					{% if page.language == meta.language %}
+						<li>{{ page.language }}</li>
+					{% else %}
+						<li><a href="{{ page.url }}">{{ page.language }}</a></li>
+					{% endif %}
+				{% endfor %}
+				 </ul>
+			</footer>
+		</div>
+
+			<!-- Scripts -->
+			<script src="{{ theme_url }}/assets/js/jquery.min.js"></script>
+			<script src="{{ theme_url }}/assets/js/jquery.dropotron.min.js"></script>
+			<script src="{{ theme_url }}/assets/js/jquery.scrolly.min.js"></script>
+			<script src="{{ theme_url }}/assets/js/jquery.scrollgress.min.js"></script>
+			<script src="{{ theme_url }}/assets/js/skel.min.js"></script>
+			<script src="{{ theme_url }}/assets/js/util.js"></script>
+			<script src="{{ theme_url }}/assets/js/main.js"></script>
+			<script src="{{ theme_url }}/assets/js/bootstrap/alert.js"></script>
+	</body>
+</html>

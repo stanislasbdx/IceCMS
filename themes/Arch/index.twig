@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+		{% if meta.description %}
+        <meta name="description" content="{{ meta.description|striptags }}">
+		{% endif %}{% if meta.robots %}
+        <meta name="robots" content="{{ meta.robots }}">
+		{% endif %}		
+		
+		<link rel="shortcut icon" href="{{ theme_url }}/images/favicon.ico">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="{{ config.author }}">
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.1.2/material.teal-red.min.css">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="{{ theme_url }}/style.css" type="text/css" />
+		<style>
+			#view-source {
+				position: fixed;
+				display: block;
+				right: 0;
+				bottom: 0;
+				margin-right: 40px;
+				margin-bottom: 40px;
+				z-index: 900;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+			<header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <h3 class="mdl-layout-title">{{ site_title }}</h3>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">{{ site_title }}</span>
+    <nav class="mdl-navigation">
+	  {% for page in pages if page.title %}
+			<a class="mdl-navigation__link" href="{{ page.url }}">{{ page.title }}</a>
+	  {% endfor %}
+    </nav>
+  </div>
+			<div class="ribbon"></div>
+			<main class="main mdl-layout__content">
+				<div class="container mdl-grid">
+					<div class="mdl-cell mdl-cell--1-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+					<div class="content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--10-col">
+						<div class="crumbs mdl-color-text--grey-500">
+							{{ page.title }}
+						</div>
+						{{ content }}					
+					</div>
+				</div>
+				<footer class="footer mdl-mini-footer">
+					<div class="mdl-mini-footer--left-section">
+						<ul class="mdl-mini-footer--link-list">
+							<li><p>Copyright &copy;  2016 {{ config.title_author }}</p></li></br>
+						</ul>
+					</div>
+					<div class="mdl-mini-footer--right-section">
+						<a target="blank" href="{{ config.social_twitter_link }}"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+						<div class="mdl-tooltip mdl-tooltip--top" for="social-tw">
+							{{ config.social_twitter_name }} <i class="fa fa-external-link"></i>
+						</div>
+						<a target="blank" href="{{ config.social_facebook_link }}"><i id="social-gt" class="fa fa-facebook-square fa-3x social"></i></a>
+						<div class="mdl-tooltip mdl-tooltip--top" for="social-gt">
+							{{ config.social_facebook_name }} <i class="fa fa-external-link"></i>
+						</div>
+					</div>
+				</footer>
+			</main>
+		</div>
+		<script src="https://code.getmdl.io/1.1.2/material.min.js"></script>
+	</body>
+</html>

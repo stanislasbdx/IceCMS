@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>Connexion au panel Admin</title>
+    <link rel="stylesheet" href="{{ base_url }}/plugins/IceEditor/assets/IceEditor.css" type="text/css" />
+    <meta name="robots" content="noindex, nofollow" />
+</head>
+<body>
+    <div class="wrapper" id="login">
+        <div class="container">
+            {% if login_error %}
+                <h1 class="error">Mauvais mot de passe</h1>
+            {% else %}
+                <h1>Connexion au panel Admin</h1>
+            {% endif %}
+            <br>
+    		<form id="login-form" class="form" method="post" action="">
+                <input type="password" name="password" id="password" placeholder="Mot de passe"/>
+    			<button type="submit" id="login-button" value="Login">Connexion</button>
+    		</form>
+            <br><a class="back" href="{{ base_url }}">&larr; Retour en arrière</a>
+    	</div>
+    </div>
+</body>
+</html>
