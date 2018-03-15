@@ -1,5 +1,5 @@
 /*
-Title: Hey !
+Title: IceCMS
 Description: Hello world !
 */
 
