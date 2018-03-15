@@ -123,9 +123,9 @@ class IceEditor extends AbstractIcePlugin
         $content = '/*
 Title: '.$title.'
 Description:
-Author: Stanislas Castaybert
+Author: 
 Date: '.date('Y/m/d').'
-Icon: http://stan.nicolas-bech.net/img/favicon.ico
+Icon: 
 Robots: noindex,nofollow
 Template:
 */';
