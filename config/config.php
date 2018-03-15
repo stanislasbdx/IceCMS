@@ -9,40 +9,40 @@
 /*
  * Paramètres de base
  */
-$config['site_title'] = '';						// Titre du site
-$config['base_url'] = '';						// Url de base
-$config['rewrite_url'] = false;					// Une indication booléenne qui force la réecriture d'url
+$config['site_title'] = 's';    // Titre du site
+$config['base_url'] = '';    // Url de base
+$config['rewrite_url'] = false;   // Une indication booléenne qui force la réecriture d'url
 
 /*
  * Paramètre des thème
  */
-$config['theme'] = '';							// Thème actif
-$config['twig_config'] = array(					// Paramètre de Twig
-	'cache' => false,							// Activer le cache Twig vers un répertoire inscriptible
-	'autoescape' => false,						// Activer l'Auto-escape Twig
-	'debug' => false							// Activer le debug Twig
+$config['theme'] = '';   // Thème actif (Arch ; MaterializeSlim ; SimpleTwo ; SquareCeption)
+$config['twig_config'] = array(   // Paramètre de Twig
+	'cache' => false,   // Activer le cache Twig vers un répertoire inscriptible
+	'autoescape' => false,   // Activer l'Auto-escape Twig
+	'debug' => false   // Activer le debug Twig
 );
 
 /*
  * Paramètre du contenu
  */
-$config['date_format'] = '%D %T';				// Définit le format de date PHP
-$config['pages_order_by'] = 'alpha';			// Trier les page par "alpha" ou "date"
-$config['pages_order'] = 'asc';					// Trier les page par "asc" ou "desc"
-$config['content_dir'] = 'content/';			// Répertoire de contenu (des pages)
-$config['content_ext'] = '.md';					// Extension des fichiers de contenu
+$config['date_format'] = '%D %T';    // Définit le format de date PHP
+$config['pages_order_by'] = 'alpha';    // Trier les page par "alpha" ou "date"
+$config['pages_order'] = 'asc';    // Trier les page par "asc" ou "desc"
+$config['content_dir'] = 'content/';    // Répertoire de contenu (des pages)
+$config['content_ext'] = '.md';    // Extension des fichiers de contenu
 
 /*
  * Paramètre du temps
  */
-$config['timezone'] = 'GTM+1';					// TimeZone (nécessaire en php5)
+$config['timezone'] = '';    // TimeZone (nécessaire en php5) [https://secure.php.net/manual/fr/timezones.php]
 
 /*
  * Paramètre des plugin
  */
 $config['IceEditor'] = array(
-    'enabled'   => true,
-    'password'  => '',							// Mot de passe d'accès au site
+    'enabled'   => true,    // Active ou non la page administrateur
+    'password'  => '',    // Mot de passe d'accès au site [Encodage en SHA 512]
     'url'       => 'admin'
 );
 
