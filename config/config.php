@@ -16,7 +16,7 @@ $config['rewrite_url'] = false;   // Une indication booléenne qui force la rée
 /*
  * Paramètre des thème
  */
-$config['theme'] = '';   // Thème actif (Arch ; MaterializeSlim ; SimpleTwo ; SquareCeption)
+$config['theme'] = 'SquareCeption';   // Thème actif (Arch ; MaterializeSlim ; SimpleTwo ; SquareCeption)
 $config['twig_config'] = array(   // Paramètre de Twig
 	'cache' => false,   // Activer le cache Twig vers un répertoire inscriptible
 	'autoescape' => false,   // Activer l'Auto-escape Twig
@@ -35,7 +35,7 @@ $config['content_ext'] = '.md';    // Extension des fichiers de contenu
 /*
  * Paramètre du temps
  */
-$config['timezone'] = '';    // TimeZone (nécessaire en php5) [https://secure.php.net/manual/fr/timezones.php]
+$config['timezone'] = 'Europe/Paris';    // TimeZone (nécessaire en php5) [https://secure.php.net/manual/fr/timezones.php]
 
 /*
  * Paramètre des plugin
