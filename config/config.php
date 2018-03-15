@@ -9,7 +9,7 @@
 /*
  * Paramètres de base
  */
-$config['site_title'] = 's';    // Titre du site
+$config['site_title'] = '';    // Titre du site
 $config['base_url'] = '';    // Url de base
 $config['rewrite_url'] = false;   // Une indication booléenne qui force la réecriture d'url
 
@@ -35,7 +35,7 @@ $config['content_ext'] = '.md';    // Extension des fichiers de contenu
 /*
  * Paramètre du temps
  */
-$config['timezone'] = 'Europe/Paris';    // TimeZone (nécessaire en php5) [https://secure.php.net/manual/fr/timezones.php]
+$config['timezone'] = '';    // TimeZone (nécessaire en php5) [https://secure.php.net/manual/fr/timezones.php]
 
 /*
  * Paramètre des plugin
