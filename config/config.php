@@ -9,7 +9,7 @@
 /*
  * Paramètres de base
  */
-$config['site_title'] = '';    // Titre du site
+$config['site_title'] = 'IceCMS';    // Titre du site
 $config['base_url'] = '';    // Url de base
 $config['rewrite_url'] = false;   // Une indication booléenne qui force la réecriture d'url
 
@@ -18,9 +18,9 @@ $config['rewrite_url'] = false;   // Une indication booléenne qui force la rée
  */
 $config['theme'] = 'SquareCeption';   // Thème actif (Arch ; MaterializeSlim ; SimpleTwo ; SquareCeption)
 $config['twig_config'] = array(   // Paramètre de Twig
-	'cache' => false,   // Activer le cache Twig vers un répertoire inscriptible
-	'autoescape' => false,   // Activer l'Auto-escape Twig
-	'debug' => false   // Activer le debug Twig
+    'cache' => false,   // Activer le cache Twig vers un répertoire inscriptible
+    'autoescape' => false,   // Activer l'Auto-escape Twig
+    'debug' => false   // Activer le debug Twig
 );
 
 /*
@@ -41,7 +41,7 @@ $config['timezone'] = '';    // TimeZone (nécessaire en php5) [https://secure.p
  * Paramètre des plugin
  */
 $config['IceEditor'] = array(
-    'enabled'   => true,    // Active ou non la page administrateur
+    'enabled'   => false,    // Active ou non la page administrateur
     'password'  => '',    // Mot de passe d'accès au site [Encodage en SHA 512]
     'url'       => 'admin'
 );
