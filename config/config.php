@@ -1,49 +1,49 @@
 <?php 
 
 /*
-* IceCMS 1.2
-* Autheur : Nicolas Bechelot
-* Contributeur : Stanislas Castaybert
+* IceCMS 1.3
+* Author : Nicolas Bechelot
+* Contributor : Stanislas Castaybert
 */
 
 /*
- * Paramètres de base
+ * General settings
  */
-$config['site_title'] = 'IceCMS';    // Titre du site
-$config['base_url'] = '';    // Url de base
-$config['rewrite_url'] = false;   // Une indication booléenne qui force la réecriture d'url
+$config['site_title'] = 'IceCMS';			// Website title
+$config['base_url'] = '';					// Base URL
+$config['rewrite_url'] = false;				// A boolean indication that forces the rewriting of url
 
 /*
- * Paramètre des thème
+ * Themes settings
  */
-$config['theme'] = 'SquareCeption';   // Thème actif (Arch ; MaterializeSlim ; SimpleTwo ; SquareCeption)
-$config['twig_config'] = array(   // Paramètre de Twig
-    'cache' => false,   // Activer le cache Twig vers un répertoire inscriptible
-    'autoescape' => false,   // Activer l'Auto-escape Twig
-    'debug' => false   // Activer le debug Twig
+$config['theme'] = 'SquareCeption';			// Active Thème (Arch ; MaterializeSlim ; SimpleTwo ; SquareCeption)
+$config['twig_config'] = array(   			// Twig settings
+    'cache' => false,   					// Enable Twig cache to a writable directory
+    'autoescape' => false,   				// Activating Twig auto-escape
+    'debug' => false   						// Enable Twig debugging
 );
 
 /*
- * Paramètre du contenu
+ * Content settings
  */
-$config['date_format'] = '%D %T';    // Définit le format de date PHP
-$config['pages_order_by'] = 'alpha';    // Trier les page par "alpha" ou "date"
-$config['pages_order'] = 'asc';    // Trier les page par "asc" ou "desc"
-$config['content_dir'] = 'content/';    // Répertoire de contenu (des pages)
-$config['content_ext'] = '.md';    // Extension des fichiers de contenu
+$config['date_format'] = '%D %T';    		// Sets the PHP date format
+$config['pages_order_by'] = 'alpha';    	// Sort pages by "alpha" or "date".
+$config['pages_order'] = 'asc';    			// Sort pages by "asc" or "desc".
+$config['content_dir'] = 'content/';   		// Content directory (of pages)
+$config['content_ext'] = '.md';    			// File extension of content files
 
 /*
- * Paramètre du temps
+ * Time settings
  */
-$config['timezone'] = '';    // TimeZone (nécessaire en php5) [https://secure.php.net/manual/fr/timezones.php]
+$config['timezone'] = '';    				// TimeZone [https://secure.php.net/manual/fr/timezones.php]
 
 /*
  * Paramètre des plugin
  */
 $config['IceEditor'] = array(
-    'enabled'   => false,    // Active ou non la page administrateur
-    'password'  => '',    // Mot de passe d'accès au site [Encodage en SHA 512]
-    'url'       => 'admin'
+    'enabled'   => false,    				// Enable or disable the administrator page
+    'password'  => '',   					// Site access password [Encoding in SHA 512].
+    'url'       => 'admin'					// Access URL to the administrator page
 );
 
 $config['ice_minify'] = array(
@@ -54,7 +54,7 @@ $config['ice_minify'] = array(
 );
 
 /*
- * Paramètre custom
+ * Custom settings
  */
 
 // Configuration du thème
